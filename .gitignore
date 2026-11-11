@@ -1,0 +1,28 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# VS Code 
+.vscode/
+
+# SQLTools scratch files
+*.session.sql
+
+# DBeaver
+.dbeaver/
+*.dbeaver-data-sources.xml
+
+# macOS
+.DS_Store
+
+# Database files and dumps
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
+pgdata/
+
+# Logs
+*.log
