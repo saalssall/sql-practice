@@ -15,3 +15,6 @@ SELECT * FROM Customer ORDER BY last_name ASC;
 
 -- Using WHERE clause to filter records based on a condition
 SELECT * FROM Customer WHERE gender = 'M';
+
+-- Using SUM to calculate the total balance of all accounts
+SELECT SUM(balance) AS TotalBalance FROM Account;
