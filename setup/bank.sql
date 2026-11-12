@@ -79,7 +79,9 @@ INSERT INTO Branch VALUES
 INSERT INTO Account VALUES
     (1, 'C1', 'E1', 101, '2026-01-10', 'Savings',  2500.00),
     (2, 'C2', 'E2', 102, '2026-03-05', 'Cheque',    800.00),
-    (3, 'C1', 'E2', 103, '2026-06-20', 'Term',    10000.00);
+    (3, 'C1', 'E2', 103, '2026-06-20', 'Term',    10000.00),
+    (3, 'C1', 'E2', 103, '2026-06-20', 'Term',    10000.00), //Duplicate entry to test constraints
+    (4, 'C2', 'E1', 101, '2026-07-15', 'Savings',  1500.00);
 
 INSERT INTO BankTransaction VALUES
     (1, 1, 'Deposit',    1000.00, '2026-10-01'),
