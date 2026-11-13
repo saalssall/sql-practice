@@ -1,1 +1,3 @@
-The repository contains learning and practices of SQL commands
+# SQL Practice
+
+A repository for learning and practicing SQL commands.
