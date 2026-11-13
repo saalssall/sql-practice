@@ -19,6 +19,7 @@ MySQL, PostgreSQL, SQLite, SQL Server, BigQuery
 6. Multi-column aggregation enables cross-dimensional analysis, answering questions like "How does X vary across combinations of A and B?"
 7. Use NULLIF to handle division by zero gracefully
 8. Use SAFE_DIVIDE in BigQuery to handle division by zero gracefully
+9. A column alias can't be referenced by another expression in the same SELECT where it is defined.
 
 ## Design Framework
 Answer three questions for effective grouped aggregation:

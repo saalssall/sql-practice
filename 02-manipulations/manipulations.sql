@@ -53,7 +53,18 @@ SELECT *,
     sales / NULLIF(discount, 0) AS gross_sales
 FROM orders;
         
-
+-- Using a Common Table Expression (CTE) to calculate additional metrics in the orders table
+WITH order_calc AS ( -- Use WITH clause to create a CTE named order_calc
+    SELECT *,
+           sales / NULLIF(1 - discount, 0) AS gross_sales,
+           sales - profit                  AS cost,
+           ship_date - order_date          AS shipping_days
+    FROM orders
+)
+SELECT *,
+       100 * profit / NULLIF(sales, 0) AS margin_ratio,
+       ROUND(gross_sales - sales, 2)             AS discount_amount 
+FROM order_calc;
 
 
 
