@@ -63,3 +63,4 @@ SELECT account_type,
 FROM Account
 GROUP BY account_type -- Group by account type
 ORDER BY customer_count DESC, revenue DESC; -- Order by customer count and revenue in descending order
+
