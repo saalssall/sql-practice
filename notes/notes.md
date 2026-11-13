@@ -17,7 +17,8 @@ MySQL, PostgreSQL, SQLite, SQL Server, BigQuery
 4. Small groups call for cautious conclusions, not immediate decisions
 5. The first sort column sets the overall order. The second only sorts rows that tie on the first column. If there are no ties, the second sort has no visible effect
 6. Multi-column aggregation enables cross-dimensional analysis, answering questions like "How does X vary across combinations of A and B?"
-
+7. Use NULLIF to handle division by zero gracefully
+8. Use SAFE_DIVIDE in BigQuery to handle division by zero gracefully
 
 ## Design Framework
 Answer three questions for effective grouped aggregation:
@@ -30,6 +31,9 @@ Grouped aggregation works through a three-step process:
 Split: Data is divided into groups based on unique values in the grouping column.
 Apply: Summary operations are performed on each group separately.
 Combine: Results from each group are assembled into a single summary table.
+
+### Data Transformation:
+Deriving new columns and rules based on exisiting columns and variables
 
 
 

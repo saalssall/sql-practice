@@ -40,5 +40,26 @@ FROM Account
 GROUP BY account_type, branch_id -- Group by branch_id and account_type
 ORDER BY branch_id;
 
---2. Data Transformation
+-- 2. Data Transformation
+
+-- Using arithmetic operations to calculate shipping duration and cost in the orders table
+SELECT *,
+        ship_date - order_date AS shipping_duration,
+        sales - profit AS cost
+FROM orders;
+
+-- Using NULLIF to avoid division by zero when calculating gross sales in the orders table
+SELECT *,
+    sales / NULLIF(discount, 0) AS gross_sales
+FROM orders;
+        
+
+
+
+
+
+
+
+-- 3. Data Filtering
+-- 4. Conditional Operations
 
