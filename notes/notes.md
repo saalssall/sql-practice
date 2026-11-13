@@ -13,6 +13,11 @@ MySQL, PostgreSQL, SQLite, SQL Server, BigQuery
 1. Clauses must be written in this order:
    SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY -> LIMIT
 2. Every column in SELECT must be in GROUP BY or inside an aggregate function
+3. Every selected column that isn’t inside an aggregate function must be included in GROUP BY
+4. Small groups call for cautious conclusions, not immediate decisions
+5. The first sort column sets the overall order. The second only sorts rows that tie on the first column. If there are no ties, the second sort has no visible effect
+6. Multi-column aggregation enables cross-dimensional analysis, answering questions like "How does X vary across combinations of A and B?"
+
 
 ## Design Framework
 Answer three questions for effective grouped aggregation:

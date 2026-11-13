@@ -64,3 +64,14 @@ FROM Account
 GROUP BY account_type -- Group by account type
 ORDER BY customer_count DESC, revenue DESC; -- Order by customer count and revenue in descending order
 
+SELECT DISTINCT account_type, branch_id FROM Account;
+
+-- Using GROUP BY with multiple columns to group records by branch_id and account_type
+SELECT account_type,
+       branch_id,
+       SUM(balance) AS total_balance,
+       COUNT(account_id) AS account_count
+FROM Account
+GROUP BY account_type, branch_id -- Group by branch_id and account_type
+ORDER BY branch_id;
+
